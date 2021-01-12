@@ -1,22 +1,6 @@
 import React, { Component } from 'react';
+import CardList from './components/card-list/card-list';
 import './App.css';
-// import {useState} from 'react';
-
-// function App() {
-//   const [change, setChange] = useState(true);
-
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         {
-//           change === true ? <p>Hello Josh!</p> : <p>Changed</p>
-//         }
-//         <button onClick = {(()=>(setChange(!change)))}>Change Text</button>
-//       </header>
-//     </div>
-//   );
-// }
 
 class App extends Component {
   constructor() {
@@ -35,9 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-       {
-         this.state.monsters.map((monster) => <h3 key={monster.id}>{monster.name}</h3>)
-       }
+        <CardList monsters = {this.state.monsters} />
       </div>
     );
   }
